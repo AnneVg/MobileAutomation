@@ -4,6 +4,11 @@ import java.util.Random;
 
 public class Tiger extends Animal implements IAnimal{
 
+    public Tiger() {
+        super("Tiger");
+        this.generateSpeed();
+    }
+
     @Override
     public void generateSpeed() {
         this.speed =(200 + (400 - 200) * new Random().nextDouble()) * 0.06;
@@ -14,8 +19,5 @@ public class Tiger extends Animal implements IAnimal{
         return false;
     }
 
-    public Tiger() {
-        super("Tiger");
-        this.generateSpeed();
-    }
+
 }
