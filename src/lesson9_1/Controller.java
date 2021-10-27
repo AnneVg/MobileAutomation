@@ -25,8 +25,8 @@ public class Controller {
         int countWinnerTiger = 0;
         int countWinnerHorse = 0;
         int countWinnerElephant = 0;
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("Start Race:" + i);
+        for (int roundNumber = 1; roundNumber <= 10; roundNumber++) {
+            System.out.println("Start Race:" + roundNumber);
             ArrayList<Animal> animals = new ArrayList<Animal>();
             Tiger tiger1 = new Tiger();
             Tiger tiger2 = new Tiger();
@@ -41,7 +41,7 @@ public class Controller {
             animals.add(elephant1);
             animals.add(elephant2);
             Animal winner = race(animals);
-            System.out.println("The winner round " + i + " " + winner.getTypeAnimal() + " with speed " + winner.getSpeed());
+            System.out.println("The winner round " + roundNumber + " " + winner.getTypeAnimal() + " with speed " + winner.getSpeed());
             switch (winner.getTypeAnimal()) {
                 case "Tiger":
                     countWinnerTiger++;
